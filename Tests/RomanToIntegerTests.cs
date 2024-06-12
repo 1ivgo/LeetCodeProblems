@@ -27,6 +27,17 @@ public class RomanToIntegerTests
         Assert.That(result, Is.EqualTo(58));
     }
 
+        [Test]
+    public void RomanToInt_WhenSubstactionSymbol_Return4()
+    {
+        const string input = "IV";
+        var romanToInteger = CreateRomanToInteger();
+
+        var result = romanToInteger.RomanToInt(input);
+
+        Assert.That(result, Is.EqualTo(4));
+    }
+
     [Test]
     public void RomanToInt_WhenSubstactionSymbol_Return1994()
     {

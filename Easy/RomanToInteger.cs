@@ -5,10 +5,19 @@ internal sealed class RomanToInteger
     internal int RomanToInt(string s) 
     {
         var result = 0;
+        var toDiff = 0;
 
-        foreach(var symbol in s)
+        for(var i = 0; i < s.Length; i++)
         {
-            result += RomanSymbolToInteger(symbol);
+            var current = RomanSymbolToInteger(s[i]);
+            if(i < s.Length - 1 && current < RomanSymbolToInteger(s[i + 1]))
+            {
+                toDiff += current;
+                continue;
+            }
+
+            result += current -= toDiff;
+            toDiff = 0;
         }
         
         return result;
