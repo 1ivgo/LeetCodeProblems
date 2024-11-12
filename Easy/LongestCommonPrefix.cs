@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace Easy;
 
 internal sealed class LongestCommonPrefix

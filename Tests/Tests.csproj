@@ -17,6 +17,7 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\Easy\Easy.csproj" />
   </ItemGroup>
 </Project>

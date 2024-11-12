@@ -1,5 +1,4 @@
 using Easy;
-using NUnit.Framework.Internal;
 
 namespace Tests;
 
@@ -9,7 +8,7 @@ public class LongestCommonPrefixTests
     [Test]
     public void FindLongestCommonPrefix_WhenStartOfString_ReturnFL()
     {
-        var input = new string[] { "flower","flow","flight" };
+        var input = new[] { "flower","flow","flight" };
         var longestCommonPrefix = CreateLongestCommonPrefix();
 
         var result = longestCommonPrefix.FindLongestCommonPrefix(input);
@@ -30,7 +29,7 @@ public class LongestCommonPrefixTests
     [Test]
     public void FindLongestCommonPrefix_WhenOneInputString_ReturnInputString()
     {
-        var input = new string[]{"inputString"};
+        var input = new[]{"inputString"};
         var longestCommonPrefix = CreateLongestCommonPrefix();
 
         var result = longestCommonPrefix.FindLongestCommonPrefix(input);
@@ -41,7 +40,7 @@ public class LongestCommonPrefixTests
     [Test]
     public void FindLongestCommonPrefix_WhenOneStartDifferent_ReturnEmptyString()
     {
-        var input = new string[] { "reflower","flow","flight" };
+        var input = new[] { "reflower","flow","flight" };
         var longestCommonPrefix = CreateLongestCommonPrefix();
 
         var result = longestCommonPrefix.FindLongestCommonPrefix(input);
@@ -52,7 +51,7 @@ public class LongestCommonPrefixTests
     [Test]
     public void FindLongestCommonPrefix_WhenMultipleEmptyStrings_ReturnEmptyString()
     {
-        var input = new string[] { "", "" };
+        var input = new[] { "", "" };
         var longestCommonPrefix = CreateLongestCommonPrefix();
 
         var result = longestCommonPrefix.FindLongestCommonPrefix(input);
@@ -63,7 +62,7 @@ public class LongestCommonPrefixTests
     [Test]
     public void FindLongestCommonPrefix_WhenABandA_ReturnA()
     {
-        var input = new string[] { "ab", "a" };
+        var input = new[] { "ab", "a" };
         var longestCommonPrefix = CreateLongestCommonPrefix();
 
         var result = longestCommonPrefix.FindLongestCommonPrefix(input);
